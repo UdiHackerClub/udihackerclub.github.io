@@ -11,6 +11,8 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/corslite@0.0.6/corslite.min.js"></script> //corslite
+
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
   
@@ -101,6 +103,7 @@
       </div>
       
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
       <script>
           $(document).ready(() => {
               $("#generate-button").click(() => {
@@ -116,11 +119,9 @@
 
                 $.ajax({
                     headers: {
-                        "Authorization": "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"
-                    }
-                })
-                $.ajax({
-                    Access-Control-Allow-Origin: http://yourdomain.com
+                        "Authorization": "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",
+                        "Access-Control-Allow-Origin": "https://udihackerclub.github.io/"
+                    },
                     type: "POST",
                     url: endpoint,
                     data: JSON.stringify(body),
